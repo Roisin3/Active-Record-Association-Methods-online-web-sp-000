@@ -11,6 +11,6 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    self.artists.all.flatten
+    self.artists.order_by(name:)
   end
 end
